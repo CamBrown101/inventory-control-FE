@@ -1,7 +1,16 @@
 import React from 'react';
 
-const Login = () => {
-  return <div>Login Screen</div>;
+type Props = {
+  isLoggedIn: boolean;
+};
+
+const Login = ({ isLoggedIn }: Props) => {
+  return (
+    <div>
+      <h1>Login Screen</h1>
+      <p>{isLoggedIn ? 'true' : 'false'}</p>
+    </div>
+  );
 };
 
 export default Login;
