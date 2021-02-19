@@ -8,7 +8,14 @@ const Login = ({ isLoggedIn }: Props) => {
   return (
     <div>
       <h1>Login Screen</h1>
-      <p>{isLoggedIn ? 'true' : 'false'}</p>
+      <form>
+        <label> Username:</label>
+        <input />
+        <label> Password:</label>
+        <input />
+        <button>Clear</button>
+        <button>Submit</button>
+      </form>
     </div>
   );
 };
