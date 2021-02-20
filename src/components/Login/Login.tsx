@@ -9,6 +9,10 @@ const Login = ({ isLoggedIn }: Props) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
+  const handleSubmit = (event: React.FormEvent) => {
+    event.preventDefault();
+    console.log('!!');
+  };
   return (
     <div>
       <h1>Login Screen</h1>
@@ -32,7 +36,7 @@ const Login = ({ isLoggedIn }: Props) => {
           }}
         />
         <button>Clear</button>
-        <button>Submit</button>
+        <button onClick={handleSubmit}>Submit</button>
       </form>
     </div>
   );
