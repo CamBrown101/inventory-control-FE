@@ -1,5 +1,13 @@
 @import '../../vaiables';
 
-h1 {
-  color: $font-color;
+.login-container {
+  margin: 20px;
+  h1 {
+    color: $font-color;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+  }
 }
