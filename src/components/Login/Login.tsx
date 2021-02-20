@@ -9,11 +9,11 @@ const Login = ({ isLoggedIn }: Props) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleSubmit = (event: React.FormEvent) => {
+  const handleSubmit = (event: React.MouseEvent<HTMLButtonElement>) => {
     event.preventDefault();
     console.log('!!');
   };
-  const handleClear = (event: React.FormEvent) => {
+  const handleClear = (event: React.MouseEvent<HTMLButtonElement>) => {
     event.preventDefault();
     setUsername('');
     setPassword('');
