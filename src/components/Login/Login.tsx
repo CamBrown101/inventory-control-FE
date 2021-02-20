@@ -13,6 +13,11 @@ const Login = ({ isLoggedIn }: Props) => {
     event.preventDefault();
     console.log('!!');
   };
+  const handleClear = (event: React.FormEvent) => {
+    event.preventDefault();
+    setUsername('');
+    setPassword('');
+  };
   return (
     <div>
       <h1>Login Screen</h1>
@@ -35,7 +40,7 @@ const Login = ({ isLoggedIn }: Props) => {
             setPassword(event.target.value);
           }}
         />
-        <button>Clear</button>
+        <button onClick={handleClear}>Clear</button>
         <button onClick={handleSubmit}>Submit</button>
       </form>
     </div>
