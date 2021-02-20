@@ -6,13 +6,13 @@ type Props = {
 
 const Login = ({ isLoggedIn }: Props) => {
   const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
 
   return (
     <div>
       <h1>Login Screen</h1>
       <form>
-        <label for="username"> Username:</label>
-        <p>{username}</p>
+        <label htmlFor="username"> Username:</label>
         <input
           id="username"
           type="text"
@@ -21,8 +21,15 @@ const Login = ({ isLoggedIn }: Props) => {
             setUsername(event.target.value);
           }}
         />
-        <label> Password:</label>
-        <input />
+        <label htmlFor="password"> Password:</label>
+        <input
+          id="password"
+          type="password"
+          value={password}
+          onChange={(event) => {
+            setPassword(event.target.value);
+          }}
+        />
         <button>Clear</button>
         <button>Submit</button>
       </form>
