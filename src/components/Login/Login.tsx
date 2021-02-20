@@ -19,7 +19,7 @@ const Login = ({ isLoggedIn }: Props) => {
     setPassword('');
   };
   return (
-    <div>
+    <div className="login-container">
       <h1>Login Screen</h1>
       <form>
         <label htmlFor="username"> Username:</label>
