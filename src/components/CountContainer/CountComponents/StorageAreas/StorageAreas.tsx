@@ -13,6 +13,18 @@ const StorageAreas = () => {
         <p>Storage Areas</p>
         <button>edit</button>
       </div>
+      <ul className="storage-area-list">
+        <li className="storage-area-list-item">Storage Area</li>
+        <li className="storage-area-list-item">Storage Area</li>
+        <li className="storage-area-list-item">Storage Area</li>
+        <li className="storage-area-list-item">Storage Area</li>
+        <li className="storage-area-list-item">Storage Area</li>
+      </ul>
+      <div className="storage-areas-footer">
+        <p className="unassigned-item-title">Unassigned Items</p>
+        <p className="unassigned-item-count">20 Items</p>
+      </div>
+      <button className="finish-count-btn">Finish Count</button>
     </div>
   );
 };
