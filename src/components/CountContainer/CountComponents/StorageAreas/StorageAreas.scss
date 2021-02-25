@@ -1,6 +1,66 @@
 @import '../../../../vaiables';
 
 .storage-areas-container {
-  background-color: red;
+  background-color: white;
+  height: 100vh;
   width: 200px;
+  display: flex;
+  justify-content: center;
+  p,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+  }
+  .storage-areas-container-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    .storage-areas-header {
+      width: 100%;
+    }
+    .count-summary-container {
+      width: 95%;
+      .count-summary-title {
+        margin-top: 10px;
+        font-size: 17px;
+      }
+      .count-summary-values {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+    .storage-areas-title {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+      margin-bottom: 10px;
+    }
+    .storage-area-list {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      font-size: 15px;
+      .area-info {
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+      }
+    }
+    .storage-areas-footer {
+      width: 100%;
+      .unassigned-item-container {
+        display: flex;
+        justify-content: space-between;
+        font-size: 10px;
+      }
+    }
+    .finish-count-btn {
+      height: 50px;
+      width: 100%;
+    }
+  }
 }
