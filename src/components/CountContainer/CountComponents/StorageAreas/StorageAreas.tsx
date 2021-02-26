@@ -2,6 +2,17 @@ import React from 'react';
 import './StorageAreas.scss';
 
 const StorageAreas = () => {
+  // const areasList = storageAreas.map(() => {
+  //   return (
+  //     <li className="storage-area-list-item">
+  //       <h5 className="area-name">{storageAreas.name}</h5>
+  //       <div className="area-info">
+  //         <h6 className="area-dollar-value">$0.00</h6>
+  //         <h6 className="area-item-count">0/100</h6>
+  //       </div>
+  //     </li>
+  //   );
+  // });
   return (
     <div className="storage-areas-container">
       <div className="storage-areas-container-inner">
@@ -20,13 +31,6 @@ const StorageAreas = () => {
             </div>
           </div>
           <ul className="storage-area-list">
-            <li className="storage-area-list-item">
-              <h5 className="area-name">Area Name</h5>
-              <div className="area-info">
-                <h6 className="area-dollar-value">$0.00</h6>
-                <h6 className="area-item-count">0/100</h6>
-              </div>
-            </li>
             <li className="storage-area-list-item">
               <h5 className="area-name">Area Name</h5>
               <div className="area-info">
