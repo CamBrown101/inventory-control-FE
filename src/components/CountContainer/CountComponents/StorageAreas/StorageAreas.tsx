@@ -1,20 +1,16 @@
 import React from 'react';
 import './StorageAreas.scss';
 
-type Props = any[];
+const StorageAreas = () => {
+  const areas = [
+    { name: 'areaOne', items: [1, 2, 3] },
+    { name: 'areaTwo', items: [1, 4, 5, 6] },
+  ];
 
-const StorageAreas = ({}: Props) => {
-  // const areasList = storageAreas.map(() => {
-  //   return (
-  //     <li className="storage-area-list-item">
-  //       <h5 className="area-name">{storageAreas.name}</h5>
-  //       <div className="area-info">
-  //         <h6 className="area-dollar-value">$0.00</h6>
-  //         <h6 className="area-item-count">0/100</h6>
-  //       </div>
-  //     </li>
-  //   );
-  // });
+  const area = areas.map((a) => {
+    console.log(a);
+  });
+
   return (
     <div className="storage-areas-container">
       <div className="storage-areas-container-inner">
