@@ -7,9 +7,9 @@ const StorageAreas = () => {
     { name: 'areaTwo', items: [1, 4, 5, 6] },
   ];
 
-  const area = areas.map((a) => {
+  const area = areas.map((a, i) => {
     return (
-      <li className="storage-area-list-item">
+      <li key={i} className="storage-area-list-item">
         <h5 className="area-name">{a.name}</h5>
         <div className="area-info">
           <h6 className="area-dollar-value">$0.00</h6>
