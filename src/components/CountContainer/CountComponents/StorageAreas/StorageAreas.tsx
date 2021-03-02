@@ -1,7 +1,9 @@
 import React from 'react';
 import './StorageAreas.scss';
 
-const StorageAreas = () => {
+type Props = any[];
+
+const StorageAreas = ({}: Props) => {
   // const areasList = storageAreas.map(() => {
   //   return (
   //     <li className="storage-area-list-item">
