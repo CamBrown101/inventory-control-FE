@@ -9,11 +9,13 @@ const ItemCountContainer = () => {
           <h2 className="selected-area">Selected Area</h2>
           <p className="last-updated">Last updated (Data) by (user)</p>
         </div>
-        <form className="item-search">
-          <button>View Filters</button>
-          <input placeholder="Search Page" />
-        </form>
-        <button>Collapse All</button>
+        <div className="item-count-table-titles">
+          <form className="item-search">
+            <button>View Filters</button>
+            <input placeholder="Search Page" />
+          </form>
+          <button>Collapse All</button>
+        </div>
         <div className="count-titles">
           <input type="checkbox" />
           <p>Item</p>

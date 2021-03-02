@@ -1,1 +1,17 @@
 @import '../../vaiables';
+
+.item-count-container {
+  .area-last-updated {
+    display: flex;
+    justify-content: space-between;
+  }
+  .item-count-table-titles {
+    display: flex;
+    justify-content: space-between;
+  }
+  .count-titles {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+}
