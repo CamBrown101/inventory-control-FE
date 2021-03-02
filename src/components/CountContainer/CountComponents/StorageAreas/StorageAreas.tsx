@@ -8,7 +8,15 @@ const StorageAreas = () => {
   ];
 
   const area = areas.map((a) => {
-    console.log(a);
+    return (
+      <li className="storage-area-list-item">
+        <h5 className="area-name">{a.name}</h5>
+        <div className="area-info">
+          <h6 className="area-dollar-value">$0.00</h6>
+          <h6 className="area-item-count">0/{a.items.length}</h6>
+        </div>
+      </li>
+    );
   });
 
   return (
@@ -28,22 +36,7 @@ const StorageAreas = () => {
               <button>edit</button>
             </div>
           </div>
-          <ul className="storage-area-list">
-            <li className="storage-area-list-item">
-              <h5 className="area-name">Area Name</h5>
-              <div className="area-info">
-                <h6 className="area-dollar-value">$0.00</h6>
-                <h6 className="area-item-count">0/100</h6>
-              </div>
-            </li>
-            <li className="storage-area-list-item">
-              <h5 className="area-name">Area Name</h5>
-              <div className="area-info">
-                <h6 className="area-dollar-value">$0.00</h6>
-                <h6 className="area-item-count">0/100</h6>
-              </div>
-            </li>
-          </ul>
+          <ul className="storage-area-list">{area}</ul>
         </div>
         <div className="storage-areas-footer">
           <div className="unassigned-item-container">
