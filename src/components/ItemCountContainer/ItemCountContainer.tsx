@@ -13,8 +13,17 @@ const ItemCountContainer = () => {
           <button>View Filters</button>
           <input placeholder="Search Page" />
         </form>
+        <button>Collapse All</button>
+        <div className="count-titles">
+          <input type="checkbox" />
+          <p>Item</p>
+          <p>Value</p>
+          <p>This Count</p>
+        </div>
       </header>
-      <p>Items Count Container</p>
+      <main>
+        <p>Items Count Container</p>
+      </main>
     </div>
   );
 };
