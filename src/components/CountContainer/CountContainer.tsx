@@ -1,5 +1,5 @@
 import React from 'react';
-import StorageAreas from './CountComponents/StorageAreas/StorageAreas';
+import StorageAreas from './StorageAreas/StorageAreas/StorageAreas';
 
 const CountContainer = () => {
   return (
