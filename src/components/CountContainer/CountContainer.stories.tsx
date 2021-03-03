@@ -8,9 +8,5 @@ export default {
 };
 
 export const Default = () => {
-  return (
-    <div>
-      <CountContainer />
-    </div>
-  );
+  return <CountContainer />;
 };
