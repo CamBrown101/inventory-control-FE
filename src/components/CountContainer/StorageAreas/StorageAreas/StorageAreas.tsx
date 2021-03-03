@@ -1,23 +1,22 @@
 import React from 'react';
 import './StorageAreas.scss';
 
-const StorageAreas = () => {
-  const areas = [
-    { name: 'areaOne', items: [1, 2, 3] },
-    { name: 'areaTwo', items: [1, 4, 5, 6] },
-  ];
+interface StorageAreas {
+  areas: any[];
+}
 
-  const area = areas.map((a, i) => {
-    return (
-      <li key={i} className="storage-area-list-item">
-        <h5 className="area-name">{a.name}</h5>
-        <div className="area-info">
-          <h6 className="area-dollar-value">$0.00</h6>
-          <h6 className="area-item-count">0/{a.items.length}</h6>
-        </div>
-      </li>
-    );
-  });
+const StorageAreas = (areas: StorageAreas) => {
+  // const area = areas.map((a, i) => {
+  //   return (
+  //     <li key={i} className="storage-area-list-item">
+  //       <h5 className="area-name">{a.name}</h5>
+  //       <div className="area-info">
+  //         <h6 className="area-dollar-value">$0.00</h6>
+  //         <h6 className="area-item-count">0/{a.items.length}</h6>
+  //       </div>
+  //     </li>
+  //   );
+  // });
 
   return (
     <div className="storage-areas-container">
