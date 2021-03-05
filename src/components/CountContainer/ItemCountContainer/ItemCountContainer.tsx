@@ -42,14 +42,15 @@ const ItemCountContainer = () => {
       storageAreaCount: 0,
     },
   ];
-  let categories: string[] = [];
 
   const getCategories = (itemsArray: Item[]) => {
+    let categories: string[] = [];
     const categoriesArray = itemsArray.map((item) => {
       if (!categories.includes(item.category)) {
         categories.push(item.category);
       }
     });
+    return categories;
   };
 
   return (
