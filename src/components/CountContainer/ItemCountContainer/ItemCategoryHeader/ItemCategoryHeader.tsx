@@ -3,6 +3,7 @@ import './ItemCategoryHeader.scss';
 
 type Item = {
   id: number;
+  category: string;
   name: string;
   totalCount: number;
   storageAreaCount: number;
