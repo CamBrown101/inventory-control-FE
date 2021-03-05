@@ -2,7 +2,7 @@ import React from 'react';
 import './ItemCategoryHeader.scss';
 
 type Item = {
-  Id: number;
+  id: number;
   name: string;
   totalCount: number;
   storageAreaCount: number;
