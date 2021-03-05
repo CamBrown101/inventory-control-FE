@@ -2,7 +2,16 @@ import React from 'react';
 import './ItemCountContainer.scss';
 import ItemCategoryHeader from './ItemCategoryHeader/ItemCategoryHeader';
 
+type Item = {
+  id: number;
+  category: string;
+  name: string;
+  totalCount: number;
+  storageAreaCount: number;
+};
+
 const ItemCountContainer = () => {
+  //Dummy data
   const items = [
     {
       id: 1,
@@ -25,7 +34,23 @@ const ItemCountContainer = () => {
       totalCount: 0,
       storageAreaCount: 0,
     },
+    {
+      id: 4,
+      category: 'Gin',
+      name: 'Beefeater',
+      totalCount: 0,
+      storageAreaCount: 0,
+    },
   ];
+  let categories: string[] = [];
+
+  const getCategories = (itemsArray: Item[]) => {
+    const categoriesArray = itemsArray.map((item) => {
+      if (!categories.includes(item.category)) {
+        categories.push(item.category);
+      }
+    });
+  };
 
   return (
     <div className="item-count-container">
