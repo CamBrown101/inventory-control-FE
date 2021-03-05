@@ -43,6 +43,7 @@ const ItemCountContainer = () => {
     },
   ];
 
+  // Loops through itemsArray and creates an array of category names
   const getCategories = (itemsArray: Item[]) => {
     let categories: string[] = [];
     const categoriesArray = itemsArray.map((item) => {
@@ -56,28 +57,35 @@ const ItemCountContainer = () => {
   const sortItemsIntoCategories = (
     itemsArray: Item[],
     categories: string[]
-  ) => {
-    const sortedItemsByCategories = [];
-    for (let i = 0; i < categories.length; i++) {
+    ) => {
+      const sortedItemsByCategories = [];
+      // Loops through categories array and adds category object to sortedItemsByCategoies array
+      for (let i = 0; i < categories.length; i++) {
       sortedItemsByCategories.push({
         category: categories[i],
       });
     }
+    // Loops through itemsArray and categories and checks if the categories match
     for (let item of itemsArray) {
       for (let category of categories) {
         if (category === item.category) {
-          for (let i = 0; i < sortedItemsByCategories.length; i++) {
+          for (let i: number = 0; i < sortedItemsByCategories.length; i++) {
             if (
               category &&
               item.category === sortedItemsByCategories[i].category
             ) {
+              // Adds item into the correct category object in the sortedItemsByCategories array
+            if(sortItemsIntoCategories[i].items.length > 0) {
+              
+            }
               sortedItemsByCategories[i] = {
-                ...sortedItemsByCategories,
-                id: item.id,
-                category: item.category,
-                name: item.name,
-                totalCount: item.totalCount,
-                storageAreaCount: item.storageAreaCount,
+                category: sortedItemsByCategories[i].category, items: [{
+                  id: item.id,
+                  category: item.category,
+                  name: item.name,
+                  totalCount: item.totalCount,
+                  storageAreaCount: item.storageAreaCount,}]}
+
               };
             }
           }
