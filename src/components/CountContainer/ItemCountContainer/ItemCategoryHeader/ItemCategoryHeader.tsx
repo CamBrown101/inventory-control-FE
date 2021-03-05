@@ -1,7 +1,20 @@
 import React from 'react';
 import './ItemCategoryHeader.scss';
 
-const ItemCategoryHeader = () => {
+type Item = {
+  Id: number;
+  name: string;
+  totalCount: number;
+  storageAreaCount: number;
+};
+
+type Props = {
+  category: string;
+  numberOfItems: number;
+  items: Item[];
+};
+
+const ItemCategoryHeader = ({ category, numberOfItems, items }: Props) => {
   return (
     <div>
       <input type="checkbox" />
