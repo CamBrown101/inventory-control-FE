@@ -58,7 +58,7 @@ const ItemCountContainer = () => {
     itemsArray: Item[],
     categories: string[]
     ) => {
-      const sortedItemsByCategories = [];
+      const sortedItemsByCategories: any[] = [];
       // Loops through categories array and adds category object to sortedItemsByCategoies array
       for (let i = 0; i < categories.length; i++) {
       sortedItemsByCategories.push({
@@ -75,9 +75,7 @@ const ItemCountContainer = () => {
               item.category === sortedItemsByCategories[i].category
             ) {
               // Adds item into the correct category object in the sortedItemsByCategories array
-            if(sortItemsIntoCategories[i].items.length > 0) {
-              
-            }
+            if(!sortedItemsByCategories[i].items) {
               sortedItemsByCategories[i] = {
                 category: sortedItemsByCategories[i].category, items: [{
                   id: item.id,
@@ -85,14 +83,21 @@ const ItemCountContainer = () => {
                   name: item.name,
                   totalCount: item.totalCount,
                   storageAreaCount: item.storageAreaCount,}]}
+            } else {
+              sortedItemsByCategories[i].items = [...sortedItemsByCategories[i].items, { id: item.id,
+                category: item.category,
+                name: item.name,
+                totalCount: item.totalCount,
+                storageAreaCount: item.storageAreaCount}]
+            }
 
               };
             }
           }
         }
       }
+      return sortedItemsByCategories;
     }
-    return sortedItemsByCategories;
   };
 
   return (
