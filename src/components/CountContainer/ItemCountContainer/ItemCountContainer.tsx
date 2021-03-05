@@ -1,7 +1,14 @@
 import React from 'react';
 import './ItemCountContainer.scss';
+import ItemCategoryHeader from './ItemCategoryHeader/ItemCategoryHeader';
 
 const ItemCountContainer = () => {
+  const items = [
+    { id: 1, name: 'Absolute', totalCount: 0, storageAreaCount: 0 },
+    { id: 2, name: 'Ketel One', totalCount: 0, storageAreaCount: 0 },
+    { id: 3, name: 'Grey Goose', totalCount: 0, storageAreaCount: 0 },
+  ];
+
   return (
     <div className="item-count-container">
       <header>
@@ -24,6 +31,7 @@ const ItemCountContainer = () => {
         </div>
       </header>
       <main>
+        <ItemCategoryHeader category="Vodka" numberOfItems={20} items={items} />
         <p>Items Count Container</p>
       </main>
     </div>
