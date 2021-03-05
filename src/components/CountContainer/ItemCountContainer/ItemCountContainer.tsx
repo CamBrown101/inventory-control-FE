@@ -61,16 +61,30 @@ const ItemCountContainer = () => {
     for (let i = 0; i < categories.length; i++) {
       sortedItemsByCategories.push({
         category: categories[i],
-        sortedItems: [],
       });
     }
     for (let item of itemsArray) {
       for (let category of categories) {
         if (category === item.category) {
-          //Need to add to sortedItemsByCategory
+          for (let i = 0; i < sortedItemsByCategories.length; i++) {
+            if (
+              category &&
+              item.category === sortedItemsByCategories[i].category
+            ) {
+              sortedItemsByCategories[i] = {
+                ...sortedItemsByCategories,
+                id: item.id,
+                category: item.category,
+                name: item.name,
+                totalCount: item.totalCount,
+                storageAreaCount: item.storageAreaCount,
+              };
+            }
+          }
         }
       }
     }
+    return sortedItemsByCategories;
   };
 
   return (
