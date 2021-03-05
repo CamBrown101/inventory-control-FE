@@ -75,6 +75,8 @@ const ItemCountContainer = () => {
               item.category === sortedItemsByCategories[i].category
             ) {
               // Adds item into the correct category object in the sortedItemsByCategories array
+              // Check to see if the items array exists in sortedItemsByCategories at position i
+              // If it doesn't exist, create it
             if(!sortedItemsByCategories[i].items) {
               sortedItemsByCategories[i] = {
                 category: sortedItemsByCategories[i].category, items: [{
