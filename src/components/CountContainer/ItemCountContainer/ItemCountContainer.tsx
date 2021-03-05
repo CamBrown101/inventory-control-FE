@@ -53,6 +53,26 @@ const ItemCountContainer = () => {
     return categories;
   };
 
+  const sortItemsIntoCategories = (
+    itemsArray: Item[],
+    categories: string[]
+  ) => {
+    const sortedItemsByCategories = [];
+    for (let i = 0; i < categories.length; i++) {
+      sortedItemsByCategories.push({
+        category: categories[i],
+        sortedItems: [],
+      });
+    }
+    for (let item of itemsArray) {
+      for (let category of categories) {
+        if (category === item.category) {
+          //Need to add to sortedItemsByCategory
+        }
+      }
+    }
+  };
+
   return (
     <div className="item-count-container">
       <header>
