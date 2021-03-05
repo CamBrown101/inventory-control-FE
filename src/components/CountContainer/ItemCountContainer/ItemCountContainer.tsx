@@ -4,9 +4,27 @@ import ItemCategoryHeader from './ItemCategoryHeader/ItemCategoryHeader';
 
 const ItemCountContainer = () => {
   const items = [
-    { id: 1, name: 'Absolute', totalCount: 0, storageAreaCount: 0 },
-    { id: 2, name: 'Ketel One', totalCount: 0, storageAreaCount: 0 },
-    { id: 3, name: 'Grey Goose', totalCount: 0, storageAreaCount: 0 },
+    {
+      id: 1,
+      category: 'Vodka',
+      name: 'Absolute',
+      totalCount: 0,
+      storageAreaCount: 0,
+    },
+    {
+      id: 2,
+      category: 'Vodka',
+      name: 'Ketel One',
+      totalCount: 0,
+      storageAreaCount: 0,
+    },
+    {
+      id: 3,
+      category: 'Vodka',
+      name: 'Grey Goose',
+      totalCount: 0,
+      storageAreaCount: 0,
+    },
   ];
 
   return (
