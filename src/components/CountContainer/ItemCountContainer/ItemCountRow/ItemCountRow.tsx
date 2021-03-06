@@ -18,7 +18,22 @@ type Props = {
 const ItemCountRow = () => {
   return (
     <div>
-      <p>count row</p>
+      <div>
+        <input type="checkbox" />
+        <p>Item Name</p>
+      </div>
+      <p>750ml (bottle)</p>
+      <div>
+        <p>value:</p>
+        <p>$49.99</p>
+      </div>
+      <button>|||</button>
+      <div>
+        <button>-</button>
+        <p className="current-count">0.5</p>
+        <p>count type</p>
+        <button>+</button>
+      </div>
     </div>
   );
 };
