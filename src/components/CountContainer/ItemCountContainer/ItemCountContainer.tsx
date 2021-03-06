@@ -41,6 +41,13 @@ const ItemCountContainer = () => {
       totalCount: 0,
       storageAreaCount: 0,
     },
+    {
+      id: 5,
+      category: 'Whiskey',
+      name: 'Lot 40',
+      totalCount: 0,
+      storageAreaCount: 0,
+    },
   ];
 
   // Loops through itemsArray and creates an array of category names
@@ -57,10 +64,10 @@ const ItemCountContainer = () => {
   const sortItemsIntoCategories = (
     itemsArray: Item[],
     categories: string[]
-    ) => {
-      const sortedItemsByCategories: any[] = [];
-      // Loops through categories array and adds category object to sortedItemsByCategoies array
-      for (let i = 0; i < categories.length; i++) {
+  ) => {
+    const sortedItemsByCategories: any[] = [];
+    // Loops through categories array and adds category object to sortedItemsByCategoies array
+    for (let i = 0; i < categories.length; i++) {
       sortedItemsByCategories.push({
         category: categories[i],
       });
@@ -77,30 +84,41 @@ const ItemCountContainer = () => {
               // Adds item into the correct category object in the sortedItemsByCategories array
               // Check to see if the items array exists in sortedItemsByCategories at position i
               // If it doesn't exist, create it
-            if(!sortedItemsByCategories[i].items) {
-              sortedItemsByCategories[i] = {
-                category: sortedItemsByCategories[i].category, items: [{
-                  id: item.id,
-                  category: item.category,
-                  name: item.name,
-                  totalCount: item.totalCount,
-                  storageAreaCount: item.storageAreaCount,}]}
-            } else {
-              sortedItemsByCategories[i].items = [...sortedItemsByCategories[i].items, { id: item.id,
-                category: item.category,
-                name: item.name,
-                totalCount: item.totalCount,
-                storageAreaCount: item.storageAreaCount}]
-            }
-
-              };
+              if (!sortedItemsByCategories[i].items) {
+                sortedItemsByCategories[i] = {
+                  category: sortedItemsByCategories[i].category,
+                  items: [
+                    {
+                      id: item.id,
+                      category: item.category,
+                      name: item.name,
+                      totalCount: item.totalCount,
+                      storageAreaCount: item.storageAreaCount,
+                    },
+                  ],
+                };
+              } else {
+                sortedItemsByCategories[i].items = [
+                  ...sortedItemsByCategories[i].items,
+                  {
+                    id: item.id,
+                    category: item.category,
+                    name: item.name,
+                    totalCount: item.totalCount,
+                    storageAreaCount: item.storageAreaCount,
+                  },
+                ];
+              }
             }
           }
         }
       }
-      return sortedItemsByCategories;
     }
+    return sortedItemsByCategories;
   };
+
+  const categories = getCategories(items);
+  console.log(categories);
 
   return (
     <div className="item-count-container">
