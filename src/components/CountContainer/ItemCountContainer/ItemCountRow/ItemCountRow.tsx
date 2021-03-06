@@ -1,38 +1,31 @@
 import React from 'react';
 import './ItemCountRow.scss';
 
-type Item = {
-  id: number;
-  category: string;
-  name: string;
-  totalCount: number;
-  storageAreaCount: number;
-};
-
 type Props = {
-  category: string;
-  numberOfItems: number;
-  items: Item[];
+  name: string;
+  bottleSize: number;
+  bottleValue: number;
+  areaCount: number;
 };
 
-const ItemCountRow = () => {
+const ItemCountRow = ({ name, bottleSize, bottleValue, areaCount }: Props) => {
   return (
-    <div>
-      <div>
+    <div className="item-row-container">
+      <div className="checkbox-item-name">
         <input type="checkbox" />
-        <p>Item Name</p>
+        <p className="item-name">Item Name</p>
       </div>
-      <p>750ml (bottle)</p>
-      <div>
+      <p className="bottle-size">750ml (bottle)</p>
+      <div className="dollar-value-wrapper">
         <p>value:</p>
         <p>$49.99</p>
       </div>
-      <button>|||</button>
-      <div>
-        <button>-</button>
+      <button className="dropdown-btn">|||</button>
+      <div className="count-controls">
+        <button className="count-minus-button">-</button>
         <p className="current-count">0.5</p>
         <p>count type</p>
-        <button>+</button>
+        <button className="count-plus-button">+</button>
       </div>
     </div>
   );
