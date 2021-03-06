@@ -6,4 +6,11 @@ export default {
   component: ItemCountRow,
 };
 
-export const Default = () => <ItemCountRow />;
+export const Default = () => (
+  <ItemCountRow
+    name="absolut"
+    bottleSize="750ml"
+    bottleType="bottle"
+    bottleValue={69.99}
+  />
+);
