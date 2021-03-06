@@ -21,6 +21,13 @@ const ItemCountContainer = () => {
       storageAreaCount: 0,
     },
     {
+      id: 4,
+      category: 'Gin',
+      name: 'Beefeater',
+      totalCount: 0,
+      storageAreaCount: 0,
+    },
+    {
       id: 2,
       category: 'Vodka',
       name: 'Ketel One',
@@ -31,13 +38,6 @@ const ItemCountContainer = () => {
       id: 3,
       category: 'Vodka',
       name: 'Grey Goose',
-      totalCount: 0,
-      storageAreaCount: 0,
-    },
-    {
-      id: 4,
-      category: 'Gin',
-      name: 'Beefeater',
       totalCount: 0,
       storageAreaCount: 0,
     },
@@ -123,6 +123,22 @@ const ItemCountContainer = () => {
   const sortedItems = sortItemsIntoCategories(items, categories);
   console.log('sortedItems', sortedItems);
 
+  const itemsAndHeadersList = sortedItems.map((category) => {
+    const itemsList = category.items.map((item: Item) => {
+      return (
+        <li>
+          <p>{item.name}</p>
+        </li>
+      );
+    });
+    return (
+      <div className="count-item-container">
+        <h1>{category.category}</h1>
+        <ul>{itemsList}</ul>
+      </div>
+    );
+  });
+
   return (
     <div className="item-count-container">
       <header>
@@ -145,8 +161,9 @@ const ItemCountContainer = () => {
         </div>
       </header>
       <main>
-        <ItemCategoryHeader category="Vodka" numberOfItems={20} items={items} />
-        <p>Items Count Container</p>
+        {itemsAndHeadersList}
+        {/* <ItemCategoryHeader category="Vodka" numberOfItems={20} items={items} /> */}
+        {/* <p>Items Count Container</p> */}
       </main>
     </div>
   );
