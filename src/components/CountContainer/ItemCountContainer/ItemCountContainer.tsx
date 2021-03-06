@@ -118,7 +118,10 @@ const ItemCountContainer = () => {
   };
 
   const categories = getCategories(items);
-  console.log(categories);
+  console.log('getCategories', categories);
+
+  const sortedItems = sortItemsIntoCategories(items, categories);
+  console.log('sortedItems', sortedItems);
 
   return (
     <div className="item-count-container">
