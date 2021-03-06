@@ -162,6 +162,7 @@ const ItemCountContainer = () => {
             <input type="checkbox" />
             <p>Item</p>
           </div>
+          <p>Package Size</p>
           <p>Current Value</p>
           <p>This Count</p>
         </div>
