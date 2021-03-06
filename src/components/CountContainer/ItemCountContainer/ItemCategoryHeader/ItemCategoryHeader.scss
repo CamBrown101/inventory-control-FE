@@ -6,12 +6,20 @@
   .category-name-checkbox {
     display: flex;
     align-items: baseline;
+    justify-content: space-between;
+    width: 15%;
     .item-category {
+      font-size: 15px;
       margin-left: 5px;
+    }
+    .number-of-items {
+      font-size: 12px;
+      width: 60px;
     }
   }
   .dollar-total-collapse {
     display: flex;
     justify-content: space-between;
+    width: 15%;
   }
 }
