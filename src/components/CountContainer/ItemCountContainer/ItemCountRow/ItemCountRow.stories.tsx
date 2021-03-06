@@ -8,7 +8,7 @@ export default {
 
 export const Default = () => (
   <ItemCountRow
-    name="absolut"
+    name="Absolut"
     bottleSize="750ml"
     bottleType="bottle"
     bottleValue={69.99}
