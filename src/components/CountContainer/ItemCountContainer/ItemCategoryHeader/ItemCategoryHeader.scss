@@ -1,1 +1,17 @@
 @import '../../../../variables';
+.item-count-header {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 10px;
+  .category-name-checkbox {
+    display: flex;
+    align-items: baseline;
+    .item-category {
+      margin-left: 5px;
+    }
+  }
+  .dollar-total-collapse {
+    display: flex;
+    justify-content: space-between;
+  }
+}
