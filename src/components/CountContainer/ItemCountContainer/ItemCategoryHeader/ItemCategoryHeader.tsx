@@ -21,8 +21,8 @@ const ItemCategoryHeader = ({ category, numberOfItems, items }: Props) => {
       <div className="category-name-checkbox">
         <input type="checkbox" />
         <h3 className="item-category">{category}</h3>
+        <p className="number-of-items">{numberOfItems} items</p>
       </div>
-      <p className="number-of-items">{numberOfItems}</p>
       <div className="dollar-total-collapse">
         <p className="dollar-value">dollar value</p>
         <button className="collapse-btn">collapse</button>
