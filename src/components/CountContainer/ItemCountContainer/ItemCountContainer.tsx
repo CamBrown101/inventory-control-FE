@@ -128,7 +128,12 @@ const ItemCountContainer = () => {
     const itemsList = category.items.map((item: Item) => {
       return (
         <li>
-          <p>{item.name}</p>
+          <ItemCountRow
+            name={item.name}
+            bottleSize="750ml"
+            bottleType="bottle"
+            bottleValue={29.99}
+          />
         </li>
       );
     });
