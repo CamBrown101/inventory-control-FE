@@ -3,6 +3,10 @@
 .item-count-container {
   width: 100%;
   margin-left: 30px;
+  .item-checkbox {
+    display: flex;
+    align-items: baseline;
+  }
   .area-last-updated {
     display: flex;
     justify-content: space-between;
