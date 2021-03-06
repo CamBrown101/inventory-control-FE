@@ -1,6 +1,7 @@
 import React from 'react';
 import './ItemCountContainer.scss';
 import ItemCategoryHeader from './ItemCategoryHeader/ItemCategoryHeader';
+import ItemCountRow from './ItemCountRow/ItemCountRow';
 
 type Item = {
   id: number;
@@ -53,7 +54,7 @@ const ItemCountContainer = () => {
   // Loops through itemsArray and creates an array of category names
   const getCategories = (itemsArray: Item[]) => {
     let categories: string[] = [];
-    const categoriesArray = itemsArray.map((item) => {
+    itemsArray.map((item) => {
       if (!categories.includes(item.category)) {
         categories.push(item.category);
       }
