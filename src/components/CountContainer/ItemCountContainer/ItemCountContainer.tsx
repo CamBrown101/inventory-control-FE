@@ -133,7 +133,11 @@ const ItemCountContainer = () => {
     });
     return (
       <div className="count-item-container">
-        <h1>{category.category}</h1>
+        <ItemCategoryHeader
+          category={category.category}
+          numberOfItems={category.items.length}
+          items={items}
+        />
         <ul>{itemsList}</ul>
       </div>
     );
@@ -162,7 +166,6 @@ const ItemCountContainer = () => {
       </header>
       <main>
         {itemsAndHeadersList}
-        {/* <ItemCategoryHeader category="Vodka" numberOfItems={20} items={items} /> */}
         {/* <p>Items Count Container</p> */}
       </main>
     </div>
