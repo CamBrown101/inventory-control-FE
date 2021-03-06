@@ -158,16 +158,15 @@ const ItemCountContainer = () => {
           <button>Collapse All</button>
         </div>
         <div className="count-titles">
-          <input type="checkbox" />
-          <p>Item</p>
-          <p>Value</p>
+          <div className="item-checkbox">
+            <input type="checkbox" />
+            <p>Item</p>
+          </div>
+          <p>Current Value</p>
           <p>This Count</p>
         </div>
       </header>
-      <main>
-        {itemsAndHeadersList}
-        {/* <p>Items Count Container</p> */}
-      </main>
+      <main>{itemsAndHeadersList}</main>
     </div>
   );
 };
