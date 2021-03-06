@@ -26,7 +26,7 @@ const ItemCountRow = ({
         {bottleSize} ({bottleType})
       </p>
       <div className="dollar-value-wrapper">
-        <p>value:</p>
+        <p>Value:</p>
         <p>${bottleValue}</p>
       </div>
       <button className="dropdown-btn">|||</button>
