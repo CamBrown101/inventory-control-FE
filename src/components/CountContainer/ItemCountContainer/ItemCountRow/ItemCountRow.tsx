@@ -17,18 +17,33 @@ const ItemCountRow = ({
   areaCount,
 }: Props) => {
   const [count, setCount] = useState(areaCount || 0);
+  console.log(count);
 
-  const countOnClick = (operation: string) => {
-    if ((operation = 'minus')) {
-      setCount(count - 1);
+  const countOnClick = (
+    operation: string,
+    e: React.FormEvent<HTMLButtonElement>
+  ) => {
+    e.preventDefault();
+    if (operation === 'minus') {
+      const newCount: number = count - 1;
+      if (newCount < 0) {
+        setCount(0);
+      } else {
+        setCount(newCount);
+      }
     }
-    if ((operation = 'plus')) {
-      setCount(count + 1);
+    if (operation === 'plus') {
+      const newCount: number = count + 1;
+      setCount(newCount);
     }
   };
 
   const inputValue = (e: React.FormEvent<HTMLInputElement>) => {
     const newValue = parseInt(e.currentTarget.value);
+    if (newValue === NaN) {
+      setCount(0);
+    } else {
+    }
     setCount(newValue);
   };
 
@@ -46,9 +61,14 @@ const ItemCountRow = ({
         <p>${bottleValue}</p>
       </div>
       <button className="dropdown-btn">|||</button>
-      <div className="count-controls">
-        <button className="count-minus-button">-</button>
+      <form className="count-controls">
+        <button
+          className="count-minus-button"
+          onClick={(e) => countOnClick('minus', e)}>
+          -
+        </button>
         <input
+          type="number"
           value={count}
           onChange={(e) => {
             inputValue(e);
@@ -57,10 +77,10 @@ const ItemCountRow = ({
         {/* <p>count type</p> */}
         <button
           className="count-plus-button"
-          onClick={() => countOnClick('plus')}>
+          onClick={(e) => countOnClick('plus', e)}>
           +
         </button>
-      </div>
+      </form>
     </div>
   );
 };
