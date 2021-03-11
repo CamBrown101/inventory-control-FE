@@ -47,6 +47,12 @@ const ItemCountRow = ({
     setCount(newValue);
   };
 
+  const handleBlur = (e: React.FormEvent<HTMLInputElement>) => {
+    if (!e.currentTarget.value) {
+      setCount(0);
+    }
+  };
+
   return (
     <div className="item-row-container">
       <div className="checkbox-item-name">
@@ -70,6 +76,9 @@ const ItemCountRow = ({
         <input
           type="number"
           value={count}
+          onBlur={(e) => {
+            handleBlur(e);
+          }}
           onChange={(e) => {
             inputValue(e);
           }}
