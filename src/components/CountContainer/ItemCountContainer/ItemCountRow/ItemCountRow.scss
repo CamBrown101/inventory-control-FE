@@ -16,7 +16,7 @@
     height: 25px;
     border: none;
     padding: 0;
-    margin: 0;
+    margin: 0 3px 0 3px;
   }
   input:focus {
     border: none;
@@ -33,6 +33,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 70px;
+    width: 100px;
+    button {
+      width: 25px;
+    }
   }
 }
