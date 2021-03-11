@@ -129,6 +129,7 @@ const ItemCountContainer = () => {
       return (
         <li>
           <ItemCountRow
+            key={item.id}
             name={item.name}
             bottleSize="750ml"
             bottleType="bottle"
