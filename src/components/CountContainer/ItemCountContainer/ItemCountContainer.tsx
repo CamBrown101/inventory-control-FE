@@ -125,11 +125,12 @@ const ItemCountContainer = () => {
   console.log('sortedItems', sortedItems);
 
   const itemsAndHeadersList = sortedItems.map((category) => {
+    console.log(category.category);
     const itemsList = category.items.map((item: Item) => {
+      console.log(item.id);
       return (
-        <li>
+        <li key={item.id}>
           <ItemCountRow
-            key={item.id}
             name={item.name}
             bottleSize="750ml"
             bottleType="bottle"
@@ -140,7 +141,7 @@ const ItemCountContainer = () => {
       );
     });
     return (
-      <div className="count-item-container">
+      <div className="count-item-container" key={category.category}>
         <ItemCategoryHeader
           category={category.category}
           numberOfItems={category.items.length}
