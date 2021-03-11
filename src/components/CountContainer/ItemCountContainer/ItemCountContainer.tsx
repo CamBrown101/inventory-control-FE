@@ -133,6 +133,7 @@ const ItemCountContainer = () => {
             bottleSize="750ml"
             bottleType="bottle"
             bottleValue={29.99}
+            areaCount={item.storageAreaCount}
           />
         </li>
       );

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './ItemCountRow.scss';
 
 type Props = {
@@ -16,6 +16,8 @@ const ItemCountRow = ({
   bottleValue,
   areaCount,
 }: Props) => {
+  const [count, setCount] = useState(areaCount);
+
   return (
     <div className="item-row-container">
       <div className="checkbox-item-name">
@@ -32,8 +34,8 @@ const ItemCountRow = ({
       <button className="dropdown-btn">|||</button>
       <div className="count-controls">
         <button className="count-minus-button">-</button>
-        <p className="current-count">{areaCount ? areaCount : 0}</p>
-        <p>count type</p>
+        <p className="current-count">{count}</p>
+        {/* <p>count type</p> */}
         <button className="count-plus-button">+</button>
       </div>
     </div>
