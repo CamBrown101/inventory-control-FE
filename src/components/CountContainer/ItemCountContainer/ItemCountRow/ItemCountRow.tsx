@@ -17,6 +17,7 @@ const ItemCountRow = ({
   areaCount,
 }: Props) => {
   const [count, setCount] = useState(areaCount || 0);
+  const [focus, setFocus] = useState(false);
   console.log(count);
 
   const countOnClick = (
@@ -51,10 +52,22 @@ const ItemCountRow = ({
     if (!e.currentTarget.value) {
       setCount(0);
     }
+    setFocus(false);
+  };
+
+  const handleFocus = () => {
+    setFocus(true);
   };
 
   return (
-    <div className="item-row-container">
+    <div
+      className={focus ? 'item-row-container focused' : 'item-row-container'}
+      onMouseEnter={() => {
+        setFocus(true);
+      }}
+      onMouseLeave={() => {
+        setFocus(false);
+      }}>
       <div className="checkbox-item-name">
         <input type="checkbox" />
         <p className="item-name">{name}</p>
@@ -76,6 +89,9 @@ const ItemCountRow = ({
         <input
           type="number"
           value={count}
+          onFocus={() => {
+            handleFocus();
+          }}
           onBlur={(e) => {
             handleBlur(e);
           }}
