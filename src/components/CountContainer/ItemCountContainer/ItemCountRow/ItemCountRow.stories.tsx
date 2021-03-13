@@ -12,5 +12,16 @@ export const Default = () => (
     bottleSize="750ml"
     bottleType="bottle"
     bottleValue={69.99}
+    isCollapsed={false}
+  />
+);
+
+export const Hidden = () => (
+  <ItemCountRow
+    name="Absolut"
+    bottleSize="750ml"
+    bottleType="bottle"
+    bottleValue={69.99}
+    isCollapsed={true}
   />
 );
