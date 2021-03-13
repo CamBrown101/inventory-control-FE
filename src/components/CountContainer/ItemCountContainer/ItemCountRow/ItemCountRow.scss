@@ -38,6 +38,10 @@
     align-items: baseline;
     width: 30%;
     overflow-x: hidden;
+    .checkbox {
+      margin: 0;
+      padding: 0;
+    }
   }
   .bottle-size {
     width: 20%;
