@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ButtonHTMLAttributes, useState } from 'react';
 import './ItemCountContainer.scss';
 import ItemCategoryHeader from './ItemCategoryHeader/ItemCategoryHeader';
 import ItemCountRow from './ItemCountRow/ItemCountRow';
@@ -118,6 +118,12 @@ const ItemCountContainer = () => {
     return sortedItemsByCategories;
   };
 
+  const [collapseAll, setCollapseAll] = useState(false);
+  const handleCollapseAll = (e: React.FormEvent<HTMLButtonElement>) => {
+    setCollapseAll(true);
+    console.log(collapseAll);
+  };
+
   const categories = getCategories(items);
   console.log('getCategories', categories);
 
@@ -136,6 +142,7 @@ const ItemCountContainer = () => {
             bottleType="bottle"
             bottleValue={29.99}
             areaCount={item.storageAreaCount}
+            isCollapsed={collapseAll}
           />
         </li>
       );
@@ -164,7 +171,12 @@ const ItemCountContainer = () => {
             <button>View Filters</button>
             <input placeholder="Search Page" />
           </form>
-          <button>Collapse All</button>
+          <button
+            onClick={(e) => {
+              handleCollapseAll(e);
+            }}>
+            Collapse All
+          </button>
         </div>
         <div className="count-titles">
           <div className="item-checkbox">
