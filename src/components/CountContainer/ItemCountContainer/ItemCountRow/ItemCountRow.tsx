@@ -69,7 +69,7 @@ const ItemCountRow = ({
         setFocus(false);
       }}>
       <div className="checkbox-item-name">
-        <input type="checkbox" />
+        <input className="checkbox" type="checkbox" />
         <p className="item-name">{name}</p>
       </div>
       <p className="bottle-size">
