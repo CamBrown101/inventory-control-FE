@@ -20,7 +20,6 @@ const ItemCountRow = ({
 }: Props) => {
   const [count, setCount] = useState(areaCount || 0);
   const [focus, setFocus] = useState(false);
-  console.log(count);
 
   const countOnClick = (
     operation: string,
