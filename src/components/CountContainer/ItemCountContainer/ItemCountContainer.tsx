@@ -121,7 +121,6 @@ const ItemCountContainer = () => {
   const [collapseAll, setCollapseAll] = useState(false);
   const handleCollapseAll = (e: React.FormEvent<HTMLButtonElement>) => {
     setCollapseAll(true);
-    console.log(collapseAll);
   };
 
   const categories = getCategories(items);
