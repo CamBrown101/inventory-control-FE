@@ -6,6 +6,7 @@ type Props = {
   bottleSize: string;
   bottleType: string;
   bottleValue: number;
+  isCollapsed: boolean;
   areaCount?: number;
 };
 
@@ -15,6 +16,7 @@ const ItemCountRow = ({
   bottleType,
   bottleValue,
   areaCount,
+  isCollapsed,
 }: Props) => {
   const [count, setCount] = useState(areaCount || 0);
   const [focus, setFocus] = useState(false);
@@ -59,9 +61,20 @@ const ItemCountRow = ({
     setFocus(true);
   };
 
+  const createClasses = (): string => {
+    let classes = 'item-row-container';
+    if (focus) {
+      classes += ' focused';
+    }
+    if (isCollapsed) {
+      classes += ' hidden';
+    }
+    return classes;
+  };
+
   return (
     <div
-      className={focus ? 'item-row-container focused' : 'item-row-container'}
+      className={createClasses()}
       onMouseEnter={() => {
         setFocus(true);
       }}
