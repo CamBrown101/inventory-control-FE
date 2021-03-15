@@ -3,7 +3,7 @@ import './NumberPad.scss';
 
 type Props = {
   value: string;
-  updateFunction: () => {};
+  updateFunction: Dispatch<SetStateAction<number>>;
 };
 
 function Numberpad({ value, updateFunction }: Props) {
