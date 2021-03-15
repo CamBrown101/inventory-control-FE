@@ -1,6 +1,11 @@
 import React from 'react';
 import './NumberPad.scss';
 
+type Props = {
+  value: string;
+  updateFunction: () => {};
+};
+
 function Numberpad() {
   return (
     <div className="number-pad-container">
