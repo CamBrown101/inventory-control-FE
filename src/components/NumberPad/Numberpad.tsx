@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './NumberPad.scss';
 
 type Props = {
@@ -7,11 +7,13 @@ type Props = {
 };
 
 function Numberpad({ value, updateFunction }: Props) {
+  const [inputValue, setInputValue] = useState(`${value}`);
+
   return (
     <div className="number-pad-container">
-      <input type="number" />
+      <input value={inputValue} type="number" />
       <div className="number-buttons">
-        <button>1</button>
+        <button onClick={() => {}}>1</button>
         <button>2</button>
         <button>3</button>
         <button>4</button>
