@@ -6,7 +6,7 @@ type Props = {
   updateFunction: () => {};
 };
 
-function Numberpad() {
+function Numberpad({ value, updateFunction }: Props) {
   return (
     <div className="number-pad-container">
       <input type="number" />
