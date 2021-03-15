@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import NumberPad from './Numberpad';
 
 export default {
@@ -6,4 +6,8 @@ export default {
   component: NumberPad,
 };
 
-export const Default = () => <NumberPad />;
+export const Default = () => {
+  const [returnValue, setReturnValue] = useState(0);
+
+  return <NumberPad updateFunction={setReturnValue} value={'3'} />;
+};
