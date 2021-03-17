@@ -15,6 +15,10 @@ function Numberpad({ value, updateFunction }: Props) {
     console.log(inputValue);
   };
 
+  const handleClear = () => {
+    setInputValue('');
+  };
+
   return (
     <div className="number-pad-container">
       <input value={inputValue} type="number" />
@@ -36,6 +40,12 @@ function Numberpad({ value, updateFunction }: Props) {
             handleClick(3);
           }}>
           3
+        </button>
+        <button
+          onClick={() => {
+            handleClear();
+          }}>
+          clear
         </button>
       </div>
     </div>
