@@ -15,6 +15,18 @@ input {
   height: 30px;
 }
 
+h4 {
+  margin: 0;
+  padding: 0;
+}
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  .close-btn {
+    height: 30px;
+    width: 30px;
+  }
+}
 .row {
   display: flex;
   width: 100%;
