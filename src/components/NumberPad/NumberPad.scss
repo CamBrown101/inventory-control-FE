@@ -1,1 +1,28 @@
 @import '../../variables';
+
+button {
+  outline: none;
+  box-shadow: none;
+  border: none;
+}
+button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+  .number-btn {
+    color: yellow;
+    background-color: black;
+    width: 33%;
+    height: 20px;
+    margin: 0;
+  }
+
+  .clear-btn {
+    color: yellow;
+    background-color: black;
+  }
+}
