@@ -92,20 +92,23 @@ function Numberpad({ value, updateFunction }: Props) {
             9
           </button>
         </div>
-        <button
-          className="number-btn"
-          onClick={() => {
-            handleClick(0);
-          }}>
-          0
-        </button>
-        <button
-          className="clear-btn"
-          onClick={() => {
-            handleClear();
-          }}>
-          clear
-        </button>
+        <div className="row">
+          <button className="number-btn">some-btn</button>
+          <button
+            className="number-btn"
+            onClick={() => {
+              handleClick(0);
+            }}>
+            0
+          </button>
+          <button
+            className="clear-btn"
+            onClick={() => {
+              handleClear();
+            }}>
+            clear
+          </button>
+        </div>
       </div>
     </div>
   );
