@@ -4,9 +4,10 @@ import './NumberPad.scss';
 type Props = {
   value: string;
   updateFunction: Dispatch<SetStateAction<number>>;
+  itemName: string;
 };
 
-function Numberpad({ value, updateFunction }: Props) {
+function Numberpad({ value, updateFunction, itemName }: Props) {
   const [inputValue, setInputValue] = useState(`${value}`);
 
   const handleClick = (value: number) => {
@@ -21,6 +22,12 @@ function Numberpad({ value, updateFunction }: Props) {
 
   return (
     <div className="number-pad-container">
+      <header>
+        <div>
+          <h4>{itemName}</h4>
+          <button className="close-btn">x</button>
+        </div>
+      </header>
       <input value={inputValue} type="number" />
       <div className="number-buttons">
         <div className="row">
