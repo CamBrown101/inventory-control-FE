@@ -23,69 +23,75 @@ function Numberpad({ value, updateFunction }: Props) {
     <div className="number-pad-container">
       <input value={inputValue} type="number" />
       <div className="number-buttons">
-        <button
-          className="number-btn"
-          onClick={() => {
-            handleClick(1);
-          }}>
-          1
-        </button>
-        <button
-          className="number-btn"
-          onClick={() => {
-            handleClick(2);
-          }}>
-          2
-        </button>{' '}
-        <button
-          className="number-btn"
-          onClick={() => {
-            handleClick(3);
-          }}>
-          3
-        </button>
-        <button
-          className="number-btn"
-          onClick={() => {
-            handleClick(4);
-          }}>
-          4
-        </button>
-        <button
-          className="number-btn"
-          onClick={() => {
-            handleClick(5);
-          }}>
-          5
-        </button>
-        <button
-          className="number-btn"
-          onClick={() => {
-            handleClick(6);
-          }}>
-          6
-        </button>
-        <button
-          className="number-btn"
-          onClick={() => {
-            handleClick(7);
-          }}>
-          7
-        </button>
-        <button
-          className="number-btn"
-          onClick={() => {
-            handleClick(8);
-          }}>
-          8
-        </button>
-        <button
-          className="number-btn"
-          onClick={() => {
-            handleClick(9);
-          }}>
-          9
-        </button>
+        <div className="row">
+          <button
+            className="number-btn"
+            onClick={() => {
+              handleClick(1);
+            }}>
+            1
+          </button>
+          <button
+            className="number-btn"
+            onClick={() => {
+              handleClick(2);
+            }}>
+            2
+          </button>{' '}
+          <button
+            className="number-btn"
+            onClick={() => {
+              handleClick(3);
+            }}>
+            3
+          </button>
+        </div>
+        <div className="row">
+          <button
+            className="number-btn"
+            onClick={() => {
+              handleClick(4);
+            }}>
+            4
+          </button>
+          <button
+            className="number-btn"
+            onClick={() => {
+              handleClick(5);
+            }}>
+            5
+          </button>
+          <button
+            className="number-btn"
+            onClick={() => {
+              handleClick(6);
+            }}>
+            6
+          </button>
+        </div>
+        <div className="row">
+          <button
+            className="number-btn"
+            onClick={() => {
+              handleClick(7);
+            }}>
+            7
+          </button>
+          <button
+            className="number-btn"
+            onClick={() => {
+              handleClick(8);
+            }}>
+            8
+          </button>
+          <button
+            className="number-btn"
+            onClick={() => {
+              handleClick(9);
+            }}>
+            9
+          </button>
+        </div>
         <button
           className="number-btn"
           onClick={() => {
