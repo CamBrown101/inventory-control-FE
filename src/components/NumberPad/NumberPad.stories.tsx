@@ -9,5 +9,13 @@ export default {
 export const Default = () => {
   const [returnValue, setReturnValue] = useState(0);
 
-  return <NumberPad updateFunction={setReturnValue} value={'3'} />;
+  return (
+    <NumberPad
+      updateFunction={setReturnValue}
+      value={'3'}
+      itemName="Absolut"
+      measurementType="ml"
+      measurementValue={750}
+    />
+  );
 };
