@@ -31,13 +31,13 @@ function Numberpad({
   return (
     <div className="number-pad-container">
       <header>
-        <div>
+        <div className="header-row">
           <h4>{itemName}</h4>
-          <h4>
-            {measurementValue} {measurementType}
-          </h4>
           <button className="close-btn">x</button>
         </div>
+        <h4>
+          {measurementValue} {measurementType}
+        </h4>
       </header>
       <input value={inputValue} type="number" />
       <div className="number-buttons">
