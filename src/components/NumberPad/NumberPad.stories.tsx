@@ -14,7 +14,7 @@ export const Default = () => {
       updateFunction={setReturnValue}
       value={'3'}
       itemName="Absolut"
-      measurementType="ml"
+      measurementType="ml (bottle)"
       measurementValue={750}
     />
   );
