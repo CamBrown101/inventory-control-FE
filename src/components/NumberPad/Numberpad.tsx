@@ -5,9 +5,17 @@ type Props = {
   value: string;
   updateFunction: Dispatch<SetStateAction<number>>;
   itemName: string;
+  measurementType: string;
+  measurementValue: number;
 };
 
-function Numberpad({ value, updateFunction, itemName }: Props) {
+function Numberpad({
+  value,
+  updateFunction,
+  itemName,
+  measurementType,
+  measurementValue,
+}: Props) {
   const [inputValue, setInputValue] = useState(`${value}`);
 
   const handleClick = (value: number) => {
@@ -25,6 +33,9 @@ function Numberpad({ value, updateFunction, itemName }: Props) {
       <header>
         <div>
           <h4>{itemName}</h4>
+          <h4>
+            {measurementValue} {measurementType}
+          </h4>
           <button className="close-btn">x</button>
         </div>
       </header>
