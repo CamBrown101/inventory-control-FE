@@ -27,8 +27,8 @@ function Numberpad({
     let valueClone = inputValue;
     if (e.nativeEvent.data === null) {
       valueClone.toString();
-      let slicedClone = valueClone.slice(0, valueClone.length - 2);
-      console.log(slicedClone);
+      let slicedClone = valueClone.slice(0, valueClone.length - 1);
+      setInputValue(slicedClone);
     } else {
       setInputValue(valueClone + e.nativeEvent.data);
     }
