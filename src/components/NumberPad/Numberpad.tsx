@@ -9,6 +9,7 @@ import './NumberPad.scss';
 type Props = {
   value: string;
   updateFunction: Dispatch<SetStateAction<number>>;
+  returnValue: number;
   itemName: string;
   measurementType: string;
   measurementValue: number;
@@ -17,6 +18,7 @@ type Props = {
 function Numberpad({
   value,
   updateFunction,
+  returnValue,
   itemName,
   measurementType,
   measurementValue,
@@ -34,16 +36,21 @@ function Numberpad({
     }
     let inputValueClone = inputValue;
     updateFunction(Number.parseInt(inputValueClone));
-    console.log(value);
+    console.log(returnValue);
   };
 
   const handleClick = (value: number) => {
     const valueClone = inputValue;
     setInputValue(valueClone + value);
+    let inputValueClone = inputValue;
+    updateFunction(Number.parseInt(inputValueClone));
+    console.log(returnValue);
   };
 
   const handleClear = () => {
     setInputValue('');
+    updateFunction(0);
+    console.log(returnValue);
   };
 
   return (
