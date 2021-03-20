@@ -12,6 +12,7 @@ export const Default = () => {
   return (
     <NumberPad
       updateFunction={setReturnValue}
+      returnValue={returnValue}
       value={'3'}
       itemName="Absolut"
       measurementType="ml (bottle)"
