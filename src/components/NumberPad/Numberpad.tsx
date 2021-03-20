@@ -24,8 +24,14 @@ function Numberpad({
   const [inputValue, setInputValue] = useState(`${value}`);
 
   const handleOnChange = (e: React.FormEvent<HTMLInputElement>) => {
-    const valueClone = inputValue;
-    setInputValue(valueClone + e.nativeEvent.data);
+    let valueClone = inputValue;
+    if (e.nativeEvent.data === null) {
+      valueClone.toString();
+      valueClone.slice(0, valueClone.length - 1);
+      console.log(valueClone);
+    } else {
+      setInputValue(valueClone + e.nativeEvent.data);
+    }
   };
 
   const handleClick = (value: number) => {
