@@ -24,6 +24,7 @@ function Numberpad({
   measurementValue,
 }: Props) {
   const [inputValue, setInputValue] = useState(`${value}`);
+  console.log(returnValue);
 
   const handleOnChange = (e: React.FormEvent<HTMLInputElement>) => {
     let valueClone = inputValue;
