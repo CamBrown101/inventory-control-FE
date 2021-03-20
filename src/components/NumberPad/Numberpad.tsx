@@ -32,6 +32,9 @@ function Numberpad({
     } else {
       setInputValue(valueClone + e.nativeEvent.data);
     }
+    let inputValueClone = inputValue;
+    updateFunction(Number.parseInt(inputValueClone));
+    console.log(value);
   };
 
   const handleClick = (value: number) => {
@@ -57,7 +60,6 @@ function Numberpad({
       <input
         onChange={(e) => {
           handleOnChange(e);
-          console.log('change');
         }}
         value={inputValue}
         type="number"
