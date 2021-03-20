@@ -24,13 +24,13 @@ function Numberpad({
   const [inputValue, setInputValue] = useState(`${value}`);
 
   const handleOnChange = (e: React.FormEvent<HTMLInputElement>) => {
-    console.log(e.currentTarget.value);
+    const valueClone = inputValue;
+    setInputValue(valueClone + e.nativeEvent.data);
   };
 
   const handleClick = (value: number) => {
     const valueClone = inputValue;
     setInputValue(valueClone + value);
-    console.log(inputValue);
   };
 
   const handleClear = () => {
@@ -48,7 +48,14 @@ function Numberpad({
           {measurementValue} {measurementType}
         </h4>
       </header>
-      <input value={inputValue} type="number" />
+      <input
+        onChange={(e) => {
+          handleOnChange(e);
+          console.log('change');
+        }}
+        value={inputValue}
+        type="number"
+      />
       <div className="number-buttons">
         <div className="row">
           <button
