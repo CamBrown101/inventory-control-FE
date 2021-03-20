@@ -1,4 +1,9 @@
-import React, { useState, Dispatch, SetStateAction } from 'react';
+import React, {
+  useState,
+  Dispatch,
+  SetStateAction,
+  ReactEventHandler,
+} from 'react';
 import './NumberPad.scss';
 
 type Props = {
@@ -17,6 +22,10 @@ function Numberpad({
   measurementValue,
 }: Props) {
   const [inputValue, setInputValue] = useState(`${value}`);
+
+  const handleOnChange = (e: React.FormEvent<HTMLInputElement>) => {
+    console.log(e.currentTarget.value);
+  };
 
   const handleClick = (value: number) => {
     const valueClone = inputValue;
