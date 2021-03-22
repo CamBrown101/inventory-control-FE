@@ -24,6 +24,12 @@ function Numberpad({
   measurementValue,
 }: Props) {
   const [inputValue, setInputValue] = useState(`${value}`);
+
+  //If returnValue is ever NaN or false, set it to 0
+  if (!returnValue) {
+    updateFunction(0);
+  }
+
   console.log(returnValue, 'global');
 
   const handleOnChange = (e: React.FormEvent<HTMLInputElement>) => {
