@@ -1,9 +1,4 @@
-import React, {
-  useState,
-  Dispatch,
-  SetStateAction,
-  ReactEventHandler,
-} from 'react';
+import React, { useState, Dispatch, SetStateAction } from 'react';
 import './NumberPad.scss';
 
 type Props = {
