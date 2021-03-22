@@ -29,14 +29,17 @@ function Numberpad({
   const handleOnChange = (e: React.FormEvent<HTMLInputElement>) => {
     let valueClone = inputValue;
     if (e.nativeEvent.data === null) {
-      valueClone.toString();
       let slicedClone = valueClone.slice(0, valueClone.length - 1);
+      valueClone.toString();
       setInputValue(slicedClone);
+      console.log(slicedClone, 'slicedClone');
+      updateFunction(Number.parseInt(slicedClone));
     } else {
       setInputValue(valueClone + e.nativeEvent.data);
+      updateFunction(Number.parseInt(valueClone + e.nativeEvent.data));
     }
-    let inputValueClone = inputValue;
-    updateFunction(Number.parseInt(inputValueClone));
+    // let inputValueClone = inputValue;
+    // updateFunction(Number.parseInt(inputValueClone));
     console.log(returnValue, 'change');
   };
 
