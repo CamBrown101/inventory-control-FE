@@ -24,7 +24,7 @@ function Numberpad({
   measurementValue,
 }: Props) {
   const [inputValue, setInputValue] = useState(`${value}`);
-  console.log(returnValue);
+  console.log(returnValue, 'global');
 
   const handleOnChange = (e: React.FormEvent<HTMLInputElement>) => {
     let valueClone = inputValue;
@@ -37,21 +37,20 @@ function Numberpad({
     }
     let inputValueClone = inputValue;
     updateFunction(Number.parseInt(inputValueClone));
-    console.log(returnValue);
+    console.log(returnValue, 'change');
   };
 
   const handleClick = (value: number) => {
-    const valueClone = inputValue;
-    setInputValue(valueClone + value);
-    let inputValueClone = inputValue;
-    updateFunction(Number.parseInt(inputValueClone));
-    console.log(returnValue);
+    const newValue = inputValue + value;
+    setInputValue(newValue);
+    updateFunction(Number.parseInt(newValue));
+    console.log(returnValue, 'click');
   };
 
   const handleClear = () => {
     setInputValue('');
     updateFunction(0);
-    console.log(returnValue);
+    console.log(returnValue, 'clear');
   };
 
   return (
