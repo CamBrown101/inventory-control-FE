@@ -67,99 +67,101 @@ function Numberpad({
           {measurementValue} {measurementType}
         </h4>
       </header>
-      <input
-        onChange={(e) => {
-          handleOnChange(e);
-        }}
-        value={inputValue}
-        type="number"
-      />
-      <div className="number-buttons">
-        <div className="row">
-          <button
-            className="number-btn"
-            onClick={() => {
-              handleClick(1);
-            }}>
-            1
-          </button>
-          <button
-            className="number-btn"
-            onClick={() => {
-              handleClick(2);
-            }}>
-            2
-          </button>{' '}
-          <button
-            className="number-btn"
-            onClick={() => {
-              handleClick(3);
-            }}>
-            3
-          </button>
-        </div>
-        <div className="row">
-          <button
-            className="number-btn"
-            onClick={() => {
-              handleClick(4);
-            }}>
-            4
-          </button>
-          <button
-            className="number-btn"
-            onClick={() => {
-              handleClick(5);
-            }}>
-            5
-          </button>
-          <button
-            className="number-btn"
-            onClick={() => {
-              handleClick(6);
-            }}>
-            6
-          </button>
-        </div>
-        <div className="row">
-          <button
-            className="number-btn"
-            onClick={() => {
-              handleClick(7);
-            }}>
-            7
-          </button>
-          <button
-            className="number-btn"
-            onClick={() => {
-              handleClick(8);
-            }}>
-            8
-          </button>
-          <button
-            className="number-btn"
-            onClick={() => {
-              handleClick(9);
-            }}>
-            9
-          </button>
-        </div>
-        <div className="row">
-          <button className="number-btn">some-btn</button>
-          <button
-            className="number-btn"
-            onClick={() => {
-              handleClick(0);
-            }}>
-            0
-          </button>
-          <button
-            className="clear-btn"
-            onClick={() => {
-              handleClear();
-            }}>
-            clear
-          </button>
+      <div className="input-and-numbers">
+        <input
+          onChange={(e) => {
+            handleOnChange(e);
+          }}
+          value={inputValue}
+          type="number"
+        />
+        <div className="number-buttons">
+          <div className="row">
+            <button
+              className="number-btn"
+              onClick={() => {
+                handleClick(1);
+              }}>
+              1
+            </button>
+            <button
+              className="number-btn"
+              onClick={() => {
+                handleClick(2);
+              }}>
+              2
+            </button>{' '}
+            <button
+              className="number-btn"
+              onClick={() => {
+                handleClick(3);
+              }}>
+              3
+            </button>
+          </div>
+          <div className="row">
+            <button
+              className="number-btn"
+              onClick={() => {
+                handleClick(4);
+              }}>
+              4
+            </button>
+            <button
+              className="number-btn"
+              onClick={() => {
+                handleClick(5);
+              }}>
+              5
+            </button>
+            <button
+              className="number-btn"
+              onClick={() => {
+                handleClick(6);
+              }}>
+              6
+            </button>
+          </div>
+          <div className="row">
+            <button
+              className="number-btn"
+              onClick={() => {
+                handleClick(7);
+              }}>
+              7
+            </button>
+            <button
+              className="number-btn"
+              onClick={() => {
+                handleClick(8);
+              }}>
+              8
+            </button>
+            <button
+              className="number-btn"
+              onClick={() => {
+                handleClick(9);
+              }}>
+              9
+            </button>
+          </div>
+          <div className="row">
+            <button className="number-btn">some-btn</button>
+            <button
+              className="number-btn"
+              onClick={() => {
+                handleClick(0);
+              }}>
+              0
+            </button>
+            <button
+              className="clear-btn"
+              onClick={() => {
+                handleClear();
+              }}>
+              clear
+            </button>
+          </div>
         </div>
       </div>
     </div>
