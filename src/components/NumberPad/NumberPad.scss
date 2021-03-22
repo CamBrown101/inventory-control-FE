@@ -5,6 +5,7 @@ button {
   box-shadow: none;
   border: none;
   margin: 0;
+  padding: 0;
 }
 button:focus {
   outline: none;
@@ -52,18 +53,15 @@ h4 {
       display: flex;
       width: 100%;
     }
-    .number-btn {
-      color: yellow;
-      background-color: black;
-      width: 33%;
-      height: 40px;
-    }
-
+    .number-btn,
     .clear-btn {
       color: yellow;
       background-color: black;
-      width: 33%;
-      height: 40px;
+      border: solid 1px grey;
+      width: 33.3333%;
+      height: 60px;
+      margin: 0;
+      padding: 0;
     }
   }
 }
