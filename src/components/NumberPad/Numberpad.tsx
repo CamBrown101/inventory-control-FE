@@ -32,28 +32,22 @@ function Numberpad({
       let slicedClone = valueClone.slice(0, valueClone.length - 1);
       valueClone.toString();
       setInputValue(slicedClone);
-      console.log(slicedClone, 'slicedClone');
       updateFunction(Number.parseInt(slicedClone));
     } else {
       setInputValue(valueClone + e.nativeEvent.data);
       updateFunction(Number.parseInt(valueClone + e.nativeEvent.data));
     }
-    // let inputValueClone = inputValue;
-    // updateFunction(Number.parseInt(inputValueClone));
-    console.log(returnValue, 'change');
   };
 
   const handleClick = (value: number) => {
     const newValue = inputValue + value;
     setInputValue(newValue);
     updateFunction(Number.parseInt(newValue));
-    console.log(returnValue, 'click');
   };
 
   const handleClear = () => {
     setInputValue('');
     updateFunction(0);
-    console.log(returnValue, 'clear');
   };
 
   return (
