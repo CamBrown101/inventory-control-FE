@@ -51,6 +51,8 @@ function Numberpad({
     updateFunction(0);
   };
 
+  const handleClose = () => {};
+
   return (
     <div className="number-pad-container">
       <header>
