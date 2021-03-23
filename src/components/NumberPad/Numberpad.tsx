@@ -51,14 +51,22 @@ function Numberpad({
     updateFunction(0);
   };
 
-  const handleClose = () => {};
+  const handleClose = () => {
+    console.log('close');
+  };
 
   return (
     <div className="number-pad-container">
       <header>
         <div className="header-row">
           <h4>{itemName}</h4>
-          <button className="close-btn">x</button>
+          <button
+            onClick={() => {
+              handleClose();
+            }}
+            className="close-btn">
+            x
+          </button>
         </div>
         <h4>
           {measurementValue} {measurementType}
